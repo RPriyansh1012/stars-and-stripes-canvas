@@ -1,0 +1,508 @@
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root {
+  --patriot-blue: #002868;
+  --liberty-red: #bf0a30;
+  --star-gold: #ffd700;
+  --cannon-smoke: #1a1a2e;
+  --parchment: #f5f0e8;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cannon-smoke);
+  color: white;
+  line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--patriot-blue);
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--star-gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: var(--star-gold);
+}
+
+/* ==========================
+   PAGE SYSTEM
+========================== */
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 80px 30px;
+}
+
+.default-page {
+  display: block;
+}
+
+.page:target {
+  display: block;
+}
+
+.storybook-container:has(.page:target) .default-page {
+  display: none;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.animated-headline {
+  font-size: 4rem;
+  color: var(--star-gold);
+  animation: pulse 2s infinite;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+/* ==========================
+   PAGE VISUALS
+========================== */
+
+.page-visual {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.page-visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dawn-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+}
+
+.united-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+}
+
+.plaza-visual {
+  margin-top: -16px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+}
+
+.visual-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.visual-strip img {
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ==========================
+   CONTENT GRID
+========================== */
+
+.content-grid {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.theme-card {
+  background: var(--parchment);
+  color: black;
+
+  max-width: 900px;
+
+  padding: 30px;
+  border-radius: 15px;
+
+  transition: 0.4s;
+}
+
+.theme-card:hover {
+  transform: translateY(-10px);
+}
+
+.theme-card h3 {
+  color: var(--liberty-red);
+  margin-bottom: 20px;
+}
+
+.story-text {
+  font-size: 1.1rem;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.page-navigation {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn {
+  display: inline-block;
+
+  text-decoration: none;
+
+  padding: 14px 25px;
+
+  margin: 10px;
+
+  border-radius: 10px;
+
+  color: white;
+
+  background: var(--liberty-red);
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--star-gold);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* ==========================
+   HARBOR SECTION
+========================== */
+
+.harbor-photo-container {
+  position: relative;
+
+  min-height: 460px;
+
+  margin: 40px auto;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.7));
+}
+
+.harbor-base,
+.harbor-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.harbor-base {
+  z-index: 0;
+}
+
+.harbor-overlay {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.harbor-overlay.skyline {
+  inset: auto 0 0 0;
+  height: 36%;
+  object-fit: contain;
+  object-position: bottom center;
+  opacity: 0.8;
+}
+
+.harbor-overlay.crowd {
+  inset: auto auto 0 0;
+  width: 100%;
+  height: 28%;
+  object-fit: cover;
+  object-position: bottom;
+  opacity: 0.82;
+}
+
+.harbor-overlay.boat {
+  inset: auto 18% 8% 18%;
+  width: auto;
+  height: 28%;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.harbor-overlay.smoke {
+  inset: 0;
+  opacity: 0.45;
+}
+
+.harbor-overlay.fireworks {
+  width: 42%;
+  height: 42%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.harbor-overlay.fireworks-one {
+  inset: 4% auto auto 4%;
+}
+
+.harbor-overlay.fireworks-two {
+  inset: 8% 6% auto auto;
+}
+
+/* ==========================
+   STARS
+========================== */
+
+.star-cluster {
+  position: absolute;
+
+  top: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.star {
+  font-size: 2.5rem;
+  color: var(--star-gold);
+
+  margin: 0 10px;
+
+  display: inline-block;
+
+  animation: twinkle 1.5s infinite;
+}
+
+.star:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* ==========================
+   FIREWORKS
+========================== */
+
+.harbor-photo-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  top: 50px;
+  left: 20%;
+
+  background: radial-gradient(
+    circle,
+    var(--star-gold),
+    var(--liberty-red),
+    transparent
+  );
+
+  animation: explode 3s infinite;
+}
+
+.harbor-photo-container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  top: 80px;
+  right: 20%;
+
+  background: radial-gradient(circle, white, var(--star-gold), transparent);
+
+  animation: explode 4s infinite;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.patriotic-footer {
+  background: var(--patriot-blue);
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.footer-quote {
+  font-style: italic;
+  color: var(--star-gold);
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .animated-headline {
+    font-size: 2.5rem;
+  }
+
+  .theme-card {
+    width: 100%;
+  }
+
+  .dawn-visual,
+  .united-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-strip img {
+    min-height: 180px;
+  }
+
+  .harbor-photo-container {
+    min-height: 360px;
+  }
+
+  .harbor-overlay.boat {
+    inset: auto 10% 8% 10%;
+  }
+}
