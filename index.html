@@ -1,3 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stars & Stripes Canvas: A 4th of July Storybook</title>
+
+    <link rel="stylesheet" href="stars-and-stripes.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="logo">🇺🇸 Stars & Stripes Storybook</div>
+
+      <nav class="nav-links">
+        <a href="#dawn" class="nav-item">Freedom's Dawn</a>
+        <a href="#plaza" class="nav-item">Patriot's Plaza</a>
+        <a href="#united" class="nav-item">United We Stand</a>
+      </nav>
+    </header>
+
+    <main class="storybook-container">
+      <!-- ==========================
+             FREEDOM'S DAWN
+        =========================== -->
+
+      <section id="dawn" class="page default-page">
+        <div class="hero-section">
+          <h1 class="animated-headline">Freedom's Dawn</h1>
+          <p class="subtitle">An Interactive Fourth of July Celebration</p>
+        </div>
+
+        <div class="page-visual dawn-visual">
+          <img src="../assets/images/skyline.png" alt="City skyline at dawn" />
+
+          <div class="visual-strip">
+            <img src="../assets/images/flag.png" alt="American flag" />
+            <img src="../assets/images/fireworks1.png" alt="Fireworks burst" />
+            <img src="../assets/images/smoke.png" alt="Smoke trail" />
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div class="theme-card">
+            <h3>Chapter 1: Dawn of Freedom</h3>
+
+            <p class="story-text">
+              On July 4, 1776, thirteen American colonies formally declared
+              their independence from Great Britain and began their journey as a
+              free nation. After enduring years of hardship and conflict, a new
+              dawn emerged. The principles of liberty, self-government, and
+              individual rights became the foundation of the United States. The
+              Declaration of Independence became a symbol of hope and inspired
+              future generations to value freedom and opportunity.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-navigation">
+          <a href="#plaza" class="btn btn-next"> Explore Patriot's Plaza → </a>
+        </div>
+      </section>
+
+      <!-- ==========================
+             PATRIOT'S PLAZA
+        =========================== -->
+
+      <section id="plaza" class="page">
+        <div class="hero-section">
+          <h1 class="animated-headline">Patriot's Plaza</h1>
+          <p class="subtitle">Experience the Harbor Lights and Celebration</p>
+        </div>
+
+        <div class="harbor-photo-container">
+          <img
+            class="harbor-base"
+            src="../assets/images/harbor.jpeg"
+            alt="Harbor waterfront at night"
+          />
+
+          <img
+            class="harbor-overlay skyline"
+            src="../assets/images/skyline.png"
+            alt="City skyline"
+          />
+          <img
+            class="harbor-overlay crowd"
+            src="../assets/images/crowd.png"
+            alt="Crowd silhouette"
+          />
+          <img
+            class="harbor-overlay boat"
+            src="../assets/images/boat.png"
+            alt="Boat on the harbor"
+          />
+          <img
+            class="harbor-overlay smoke"
+            src="../assets/images/smoke.png"
+            alt="Drifting smoke"
+          />
+          <img
+            class="harbor-overlay fireworks fireworks-one"
+            src="../assets/images/fireworks1.png"
+            alt="Fireworks burst one"
+          />
+          <img
+            class="harbor-overlay fireworks fireworks-two"
+            src="../assets/images/fireworks2.png"
+            alt="Fireworks burst two"
+          />
+
+          <div class="star-cluster" aria-hidden="true">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+        </div>
+
+        <div class="page-visual plaza-visual">
+          <img
+            src="../assets/images/harbor.jpeg"
+            alt="Harbor water reflection"
+          />
+        </div>
+
+        <div class="content-grid">
+          <div class="theme-card">
+            <h3>Chapter 2: Patriot's Plaza</h3>
+
+            <p class="story-text">
+              The Stars and Stripes is one of the most recognizable symbols in
+              the world. The fifty stars represent the states of the Union,
+              while the thirteen stripes honor the original colonies. Every
+              Fourth of July, cities and towns across America host parades,
+              concerts, festivals, and fireworks displays. Families gather
+              together to celebrate freedom, history, and national pride. Along
+              the harbor, colorful fireworks illuminate the night sky while
+              reflections shimmer across the water.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-navigation">
+          <a href="#dawn" class="btn btn-prev"> ← Back to Dawn </a>
+
+          <a href="#united" class="btn btn-next"> Stand United → </a>
+        </div>
+      </section>
+
+      <!-- ==========================
+             UNITED WE STAND
+        =========================== -->
+
+      <section id="united" class="page">
+        <div class="hero-section">
+          <h1 class="animated-headline">United We Stand</h1>
+          <p class="subtitle">American Pride and Unity</p>
+        </div>
+
+        <div class="page-visual united-visual">
+          <img src="../assets/images/flag.png" alt="American flag waving" />
+
+          <div class="visual-strip">
+            <img src="../assets/images/fireworks2.png" alt="Fireworks burst" />
+            <img src="../assets/images/skyline.png" alt="Skyline silhouette" />
+            <img src="../assets/images/smoke.png" alt="Smoke trail" />
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div class="theme-card final-tribute">
+            <h3>Chapter 3: United We Stand</h3>
+
+            <p class="story-text">
+              Throughout its history, America has faced many challenges and
+              obstacles. The nation's strength comes from people working
+              together despite differences in culture, background, and beliefs.
+              Diversity has helped shape the United States into a vibrant and
+              innovative country. The Fourth of July reminds us that freedom is
+              strongest when communities unite with a shared commitment to
+              opportunity, responsibility, and hope for the future.
+            </p>
+          </div>
+        </div>
+
+        <div class="page-navigation">
+          <a href="#plaza" class="btn btn-prev"> ← Back to Plaza </a>
+
+          <a href="#dawn" class="btn btn-restart"> Restart Journey ↺ </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="patriotic-footer">
+      <blockquote class="footer-quote">
+        "Freedom is not only a privilege, but a responsibility shared by all."
+      </blockquote>
+
+      <p>🇺🇸 Stars & Stripes Canvas • Happy Independence Day 🇺🇸</p>
+    </footer>
+  </body>
+</html>
 <!DOCTYPE Html>
 <html lang="en">
 <head>
